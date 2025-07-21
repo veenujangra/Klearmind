@@ -138,6 +138,13 @@ export default class Page {
       document.documentElement.classList.remove('scroll-up')
       document.documentElement.classList.add('scroll-down')
     }
+
+    // is scrolled
+    if (this.lenis.scroll > 0) {
+      document.documentElement.classList.add('scrolled')
+    } else if (this.lenis.scroll === 0) {
+      document.documentElement.classList.remove('scrolled')
+    }
   }
 
   onResize() {}
